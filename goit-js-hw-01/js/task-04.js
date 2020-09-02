@@ -5,6 +5,7 @@ const pricePerDroid = 3000;
 let message;
 
 const amount = prompt("Введите количечто дроидов для покупки");
+
 const totalPrice = amount * pricePerDroid;
 
 if (amount === null) {
