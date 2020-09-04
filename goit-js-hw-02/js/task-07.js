@@ -8,7 +8,7 @@ const isLoginValid = function (login) {
 };
 
 const isLoginUnique = function (allLogins, login) {
-  const isUnique = !allLogins.includes(login);
+  const isUnique = allLogins.includes(login);
   return isUnique;
 };
 
@@ -16,9 +16,9 @@ const isLoginUnique = function (allLogins, login) {
 const addLogin = function (allLogins, login) {
   let message;
 
-  if (isLoginValid(login) === false) {
+  if (!isLoginValid(login)) {
     message = "Ошибка! Логин должен быть от 4 до 16 символов";
-  } else if (isLoginUnique(allLogins, login) === false) {
+  } else if (isLoginUnique(allLogins, login)) {
     message = "Такой логин уже используется!";
   } else {
     allLogins.push(login);
@@ -33,12 +33,12 @@ const addLogin = function (allLogins, login) {
 // const addLogin = function (allLogins, login) {
 //   let message = "Логин успешно добавлен!";
 
-//   if (isLoginValid(login) === false) {
+//   if (!isLoginValid(login)) {
 //     message = "Ошибка! Логин должен быть от 4 до 16 символов";
 //     return message;
 //   } 
   
-//   if (isLoginUnique(allLogins, login) === false) {
+//   if (isLoginUnique(allLogins, login)) {
 //     message = "Такой логин уже используется!";
 //     return message;
 //   } 
