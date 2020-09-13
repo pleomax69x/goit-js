@@ -1,7 +1,19 @@
 "use strict";
 
-const findBestEmployee = function(employees) {
+const findBestEmployee = function (employees) {
   // твой код
+
+  const keys = Object.keys(employees);
+
+  let bestEmployee = keys[0];
+
+  for (const key of keys) {
+    if (employees[bestEmployee] < employees[key]) {
+      bestEmployee = key;
+    }
+  }
+
+  return bestEmployee;
 };
 
 /*
@@ -13,7 +25,7 @@ console.log(
     david: 35,
     helen: 1,
     lorence: 99,
-  }),
+  })
 ); // lorence
 
 console.log(
@@ -21,7 +33,7 @@ console.log(
     poly: 12,
     mango: 17,
     ajax: 4,
-  }),
+  })
 ); // mango
 
 console.log(
@@ -30,5 +42,5 @@ console.log(
     david: 21,
     kiwi: 19,
     chelsy: 38,
-  }),
+  })
 ); // lux
