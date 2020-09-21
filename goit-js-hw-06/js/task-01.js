@@ -146,12 +146,11 @@ const getSortedUniqueSkills = (users) => {
     acc.push(...user.skills);
     return acc;
   }, []);
-
-  const repeatArr = [];
+  
   const clearArr = allSkills.reduce((acc, skil) => {
 
-    acc.includes(skil) ? repeatArr.push(skil) : acc.push(skil);
-    
+    acc.includes(skil) ? acc : acc.push(skil);
+
     return acc;
   }, []);
 
