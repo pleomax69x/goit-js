@@ -83,3 +83,108 @@ numbers.sort(function(a, b){
 // сделать копию массива
 // const copy = numbers.slice();
 const copy = [...numbers];
+
+
+const containerRef = document.createElement('div');
+containerRef.classList.add('product-card');
+
+const titleRef = document.createElement('h2');
+titleRef.textContent = product.name;
+titleRef.classList.add('product-card__name');
+console.log(titleRef);
+
+const descRef = document.createElement('p');
+descRef.textContent = procuct.description;
+console.log(descRef);
+
+const priceRef = document.createElement('p');
+priceRef.textContent = `Цена: ${procuct.price} кредитов`;
+console.log(priceRef);
+
+containerRef.appendChild(titleRef);
+containerRef.appendChild(descRef);
+containerRef.appendChild(priceRef);
+
+// containerRef.append(titleRef, descRef, priceRef);
+
+console.log(containerRef);
+
+// создаем переменную , и добавляем всавку
+const cardRootRef = document.querySelector('root');
+cardRootRef.appendChild(containerRef);
+
+
+// const parentDiv = document.createElement('div');
+// parentDiv.appendChild(containerRef);
+
+console.log(parentDiv);
+
+//  ===================================================== ФУНКЦИИ
+
+const add = function(a, b, c) {
+    return a + b + c;
+  };
+
+
+  function add(a, b, c) {
+    return a + b + c;
+  };
+
+//   стрелка с параметрами
+  const add = (a, b) => {
+      return a +b;
+  };
+//  с одним параметром
+  const logMessage = message => {
+console.log();
+  };
+
+// без параметров
+
+const greet = () => {
+    console.log();
+}
+// =========================================================== ФУНКЦИИ END
+
+
+
+const product = {
+    name: 'privodu',
+    description: 'lorem20',
+    price: 3000,
+    available: true,
+};
+
+const containerRef = document.createElement('div');
+containerRef.classList.add('product-card');
+
+const titleRef = document.createElement('h2');
+titleRef.textContent = product.name;
+titleRef.classList.add('product-card__name');
+console.log(titleRef);
+
+const descRef = document.createElement('p');
+descRef.textContent = product.description;
+console.log(descRef);
+
+const priceRef = document.createElement('p');
+priceRef.textContent = `Цена: ${product.price} кредитов`;
+console.log(priceRef);
+
+containerRef.appendChild(titleRef);
+containerRef.appendChild(descRef);
+containerRef.appendChild(priceRef);
+
+containerRef.append(titleRef, descRef, priceRef);
+
+console.log(containerRef);
+
+// создаем переменную , и добавляем всавку
+const cardRootRef = document.querySelector('#root');
+cardRootRef.appendChild(containerRef);
+
+
+// const parentDiv = document.createElement('div');
+// parentDiv.appendChild(containerRef);
+
+// console.log(parentDiv);
