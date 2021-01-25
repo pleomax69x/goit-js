@@ -8,3 +8,6 @@ function articleMarkup(data) {
 }
 
 export default articleMarkup;
+
+
+// beforeend
